@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Enable IP Forwarding to prevent local host from blocking connection to remorte host. 
+"""Enable IP Forwarding to prevent the LOCAL host from blocking connection to the REMOTE host. 
 (ex: sysctl net.ipv4.ip_forward = 1)"""
 
 import sys
