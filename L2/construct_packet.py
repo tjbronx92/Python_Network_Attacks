@@ -11,9 +11,9 @@ if len(sys.argv) < 4:
 	print(sys.argv[0] | "REQUIRED: <target_ip> <spoof_ip> <attack_iface>")
 	sys.exit(1)
 
-iface = sys.argv[3]
 target_ip = sys.argv[1]
 fake_ip = sys.argv[2]
+iface = sys.argv[3]
 
 ethernet = Ether()
 
