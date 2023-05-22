@@ -1,7 +1,7 @@
 #!/usr/bin/pythion3
 
 import sys
-from scapy.all import sniff, sendp, ARp, Ether
+from scapy.all import sniff, sendp, ARP, Ether
 
 if len(sys.argv) < 2:
 	print(sys.argv[0] + " <iface_id>")
