@@ -23,8 +23,8 @@ def sig_int_handler(signum, frame):
     sys.exit(1)
 
 def watch_arp(pkt):
-    #is-at pakt recieved (ARP Respnse)
-    if pkt[ARP].op == 2:
+    #If is-at pakt recieved (ARP Respnse)
+    if pkt[ARP].op == 2: # is-at (response)
         print(pkt[ARP].hwsrc + " " + pkt[ARP].psrc)
 
         #   Remember NEW Device
