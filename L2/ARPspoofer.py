@@ -1,4 +1,4 @@
-#!/usr/bin/pythion3
+#!/usr/bin/python3
 
 import sys
 from scapy.all import sniff, sendp, ARP, Ether
